@@ -1,9 +1,7 @@
 services:
-  - type: web
+  - type: worker
     name: leechbot
     env: python
-    buildCommand: |
-      echo "python-3.10.12" > runtime.txt
-      pip install -r requirements.txt
+    buildCommand: "pip install -r requirements.txt"
     startCommand: "python3 main.py"
     autoDeploy: true
